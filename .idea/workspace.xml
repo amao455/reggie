@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca74ac4d-57bf-4de9-83b7-5eee1151a92f" name="Changes" comment="" />
+    <list default="true" id="ca74ac4d-57bf-4de9-83b7-5eee1151a92f" name="Changes" comment="第一次提交">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +177,18 @@
       <workItem from="1661858782320" duration="3718000" />
       <workItem from="1661876244673" duration="507000" />
       <workItem from="1661876897326" duration="25000" />
+      <workItem from="1661877111606" duration="680000" />
+      <workItem from="1661877835000" duration="128000" />
+      <workItem from="1661878712528" duration="337000" />
     </task>
+    <task id="LOCAL-00001" summary="第一次提交">
+      <created>1661877429736</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1661877429736</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,8 +202,42 @@
             <State />
           </value>
         </entry>
+        <entry key="cffeb29b-321c-480d-a74c-399398a2c2b6">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="cffeb29b-321c-480d-a74c-399398a2c2b6" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第一次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次提交" />
   </component>
 </project>
