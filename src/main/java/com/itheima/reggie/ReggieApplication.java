@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.util.LinkedList;
@@ -15,6 +16,7 @@ import java.util.Stack;
 @SpringBootApplication
 @ServletComponentScan  // 这样才会扫描过滤器
 @EnableTransactionManagement // 开启事务管理的支持
+@EnableCaching // 开启 Spring Cache注解方式的缓存功能
 public class ReggieApplication {
 
     public static void main(String[] args) {
