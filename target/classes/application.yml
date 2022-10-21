@@ -40,7 +40,7 @@ spring:
       sql:
         show: true #开启SQL显示，默认false
   main:
-    allow-bean-definition-overriding: true # 允许并定义覆盖
+    allow-bean-definition-overriding: true # 允许并定义覆盖(读写分离)
   # Redis 相关配置
   redis:
     host: localhost
@@ -61,10 +61,11 @@ mybatis-plus:
   configuration:
     #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
     map-underscore-to-camel-case: true
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 将sql语句打印到控制台
   global-config:
     db-config:
-      id-type: ASSIGN_ID
+      id-type: ASSIGN_ID # 数据库自动填充字段
+
 
 # 文件上传的位置
 reggie:

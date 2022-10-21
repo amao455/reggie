@@ -253,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666326638851</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="swagger优化">
+      <created>1666340074695</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1666340074695</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -319,6 +326,7 @@
     <MESSAGE value="使用redis缓存短信验证码和菜品数据" />
     <MESSAGE value="使用Spring Cache缓存套餐数据" />
     <MESSAGE value="缓存优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="缓存优化" />
+    <MESSAGE value="swagger优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="swagger优化" />
   </component>
 </project>
