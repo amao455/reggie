@@ -1,0 +1,10 @@
+com\itheima\reggie\service\OrderService.class
+com\itheima\reggie\entity\OrderDetail.class
+com\itheima\reggie\service\impl\OrderServiceImpl.class
+com\itheima\reggie\mapper\OrderMapper.class
+com\itheima\reggie\service\impl\OrderDetailServiceImpl.class
+com\itheima\reggie\controller\OrderDetailController.class
+com\itheima\reggie\service\OrderDetailService.class
+com\itheima\reggie\mapper\OrderDetailMapper.class
+com\itheima\reggie\entity\Orders.class
+com\itheima\reggie\controller\OrderController.class
