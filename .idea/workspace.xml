@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca74ac4d-57bf-4de9-83b7-5eee1151a92f" name="Changes" comment="swagger优化">
+    <list default="true" id="ca74ac4d-57bf-4de9-83b7-5eee1151a92f" name="Changes" comment="打包完成">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reggie_take_out-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/reggie_take_out-1.0-SNAPSHOT.jar.original" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,8 +163,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ReggieApplicationTest" />
         <item itemvalue="Spring Boot.ReggieApplication" />
+        <item itemvalue="Spring Boot.ReggieApplicationTest" />
         <item itemvalue="JUnit.ReggieApplicationTest.testString" />
         <item itemvalue="JUnit.ReggieApplicationTest.testRedis" />
         <item itemvalue="JUnit.ReggieApplicationTest.sendSms1" />
@@ -260,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666340074695</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="打包完成">
+      <created>1666341378153</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1666341378153</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -327,6 +342,7 @@
     <MESSAGE value="使用Spring Cache缓存套餐数据" />
     <MESSAGE value="缓存优化" />
     <MESSAGE value="swagger优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="swagger优化" />
+    <MESSAGE value="打包完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="打包完成" />
   </component>
 </project>

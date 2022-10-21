@@ -69,4 +69,4 @@ mybatis-plus:
 
 # 文件上传的位置
 reggie:
-  path: C:\Users\mqw\Desktop\java\phone\
+  path: /usr/local/phone/
