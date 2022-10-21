@@ -23,7 +23,12 @@
 
     <dependencies>
 
-        <!--v1.2的修改-->
+        <!--knife4j是java MVC框架集成Swagger的解决方案-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-spring-boot-starter</artifactId>
+            <version>3.0.2</version>
+        </dependency>
 
 
         <!--读写分离的相关依赖-->

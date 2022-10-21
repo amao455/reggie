@@ -4,9 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.itheima.reggie.common.R;
 import com.itheima.reggie.entity.User;
 import com.itheima.reggie.service.UserService;
-import com.itheima.reggie.utils.SMSUtils;
-import com.itheima.reggie.utils.SendSms;
 import com.itheima.reggie.utils.ValidateCodeUtils;
+import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +23,7 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 @RestController
 @RequestMapping("/user")
+@Api(tags = "用户相关接口")
 public class UserController {
 
     @Autowired
@@ -34,6 +34,7 @@ public class UserController {
     private RedisTemplate redisTemplate;
 
     @PostMapping("/sendMsg")
+
     public R<String> sendMsg(@RequestBody User user, HttpSession session){
 
         // 获取手机号

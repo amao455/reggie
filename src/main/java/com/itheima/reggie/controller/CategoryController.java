@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.itheima.reggie.common.R;
 import com.itheima.reggie.entity.Category;
 import com.itheima.reggie.service.CategoryService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +21,7 @@ import java.util.List;
 @Slf4j
 @RestController
 @RequestMapping("/category")
+@Api(tags = "分类相关接口")
 public class CategoryController {
 
     @Autowired
@@ -28,6 +31,7 @@ public class CategoryController {
      * 新增分类
      */
     @PostMapping
+    @ApiOperation("新增分类")
     public R<String> save(@RequestBody Category category){
 
         log.info("category:{}", category);
@@ -45,6 +49,7 @@ public class CategoryController {
      * 分页查询
      */
     @GetMapping("/page")
+    @ApiOperation("分页查询")
     public R<Page> page(int page, int pageSize){
         // 分页构造器
         Page<Category> pageInfo = new Page<>(page, pageSize);
@@ -65,6 +70,7 @@ public class CategoryController {
      * 根据id删除分类
      */
     @DeleteMapping
+    @ApiOperation("根据id删除分类")
     public R<String> delete(Long ids){
         log.info("删除分类，id为：{}", ids);
 
@@ -78,6 +84,7 @@ public class CategoryController {
      * 根据id修改分类信息
      * @return
      */
+    @ApiOperation("根据id修改分类信息")
     public R<String> update(@RequestBody Category category){
 
         log.info("修改分类信息:{}",category);
@@ -89,6 +96,7 @@ public class CategoryController {
      * 查询分类信息
      */
     @GetMapping("/list")
+    @ApiOperation("查询分类信息")
     public R<List<Category>> list(Category category){
         log.info("category:{}", category);
 

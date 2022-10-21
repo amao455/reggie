@@ -2,6 +2,9 @@ package com.itheima.reggie.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import java.io.Serializable;
 import java.time.LocalDateTime;
@@ -10,6 +13,7 @@ import java.time.LocalDateTime;
  * 地址簿
  */
 @Data
+@ApiModel("地址簿")
 public class AddressBook implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -18,30 +22,37 @@ public class AddressBook implements Serializable {
 
 
     //用户id
+    @ApiModelProperty("用户id")
     private Long userId;
 
 
     //收货人
+    @ApiModelProperty("收货人")
     private String consignee;
 
 
     //手机号
+    @ApiModelProperty("手机号")
     private String phone;
 
 
     //性别 0 女 1 男
+    @ApiModelProperty("性别")
     private String sex;
 
 
     //省级区划编号
+    @ApiModelProperty("省级区域编号")
     private String provinceCode;
 
 
     //省级名称
+    @ApiModelProperty("省级名称")
     private String provinceName;
 
 
     //市级区划编号
+    @ApiModelProperty("市级区域名称")
     private String cityCode;
 
 

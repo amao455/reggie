@@ -4,8 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ca74ac4d-57bf-4de9-83b7-5eee1151a92f" name="Changes" comment="缓存优化">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/SetmealController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/SetmealController.java" afterDir="false" />
+    <list default="true" id="ca74ac4d-57bf-4de9-83b7-5eee1151a92f" name="Changes" comment="使用redis缓存短信验证码和菜品数据">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/entity/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/entity/AddressBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itheima/reggie/filter/LoginCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/ReggieApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/ReggieApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/common/BaseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/common/BaseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/common/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/common/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/config/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/config/WebMvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/CategoryController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/CategoryController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/CommonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/CommonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/DishController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/DishController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/EmployeeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/SetmealController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/SetmealController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/entity/AddressBook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/entity/AddressBook.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/filter/LoginCheckFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/filter/LoginCheckFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/itheima/reggie/service/impl/DishServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/itheima/reggie/service/impl/DishServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="v1.1" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
