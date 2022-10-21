@@ -10,4 +10,5 @@ import org.springframework.stereotype.Service;
 @Slf4j
 @Service
 public class AddressBookServiceImpl extends ServiceImpl<AddressBookMapper, AddressBook> implements AddressBookService {
+
 }

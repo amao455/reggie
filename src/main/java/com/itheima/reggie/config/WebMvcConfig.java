@@ -16,10 +16,9 @@ import java.util.List;
 public class WebMvcConfig extends WebMvcConfigurationSupport {
 
     /*
-    * 设置静态资源映射
+    * 设置静态资源映射，不设置则无法访问页面
     *
     * */
-
     @Override
     protected void addResourceHandlers(ResourceHandlerRegistry registry) {
         log.info("开始进行静态资源映射");

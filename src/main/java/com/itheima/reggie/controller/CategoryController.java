@@ -32,6 +32,10 @@ public class CategoryController {
 
         log.info("category:{}", category);
 
+        //  查询输入的分类名称是否存在
+        LambdaQueryWrapper<Category> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(Category::getName , category.getName());
+
         categoryService.save(category);
         return R.success("新增分类成功");
 
@@ -79,7 +83,6 @@ public class CategoryController {
         log.info("修改分类信息:{}",category);
         categoryService.updateById(category);
         return R.success("修改分类信息成功");
-
     }
 
     /**

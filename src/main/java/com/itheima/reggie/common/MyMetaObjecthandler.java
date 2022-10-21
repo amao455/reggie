@@ -24,7 +24,7 @@ public class MyMetaObjecthandler implements MetaObjectHandler {
         // 执行insert方法时执行
         log.info("公共字段自动填充[insert]...");
         log.info(metaObject.toString());
-
+        
         metaObject.setValue("createTime", LocalDateTime.now());
         metaObject.setValue("updateTime", LocalDateTime.now());
 

@@ -15,6 +15,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+/**
+ * 检查是否完成登录
+ */
+// 拦截所有请求
 @WebFilter(filterName = "loginCheckFilter", urlPatterns = "/*")
 @Slf4j
 public class LoginCheckFilter implements Filter {
@@ -63,12 +67,12 @@ public class LoginCheckFilter implements Filter {
             return;
         }
 
-        // 4-1 判断登录状态，如果已登录，则直接放行
+        // 4-1 判断登录状态，如果已登录，则直接放行(怎么判断的)
         if(request.getSession().getAttribute("employee") != null){
             log.info("用户已登录，用户id为：{}", request.getSession().getAttribute("employee"));
 
 
-            // 调用BaseContext来获取当前登录用户的id
+            // 调用BaseContext来获取当前登录用户的id，为了之后的公共字段填充
             Long empId = (Long) request.getSession().getAttribute("employee");
             BaseContext.setCurrentId(empId);
 
@@ -93,6 +97,7 @@ public class LoginCheckFilter implements Filter {
 
         log.info("用户未登录");
         // 5 如果没有登录则返回未登录结果，通过输出流方式向客户端页面响应数据
+        // TODO
         response.getWriter().write(JSON.toJSONString(R.error("NOTLOGIN")));
         return;
 
@@ -103,6 +108,7 @@ public class LoginCheckFilter implements Filter {
      */
     public boolean check(String[] urls, String requestURI){
         for (String url : urls) {
+            // 专门判断两个url是否相等
             boolean match = PATH_MATCHER.match(url, requestURI);
             if(match){
                 return true;

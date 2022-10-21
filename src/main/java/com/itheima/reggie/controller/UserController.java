@@ -41,7 +41,7 @@ public class UserController {
 
 
         if(StringUtils.isNotEmpty(phone)){
-            // 生成随机的4位验证码
+            // 使用工具，生成随机的4位验证码
             String code = ValidateCodeUtils.generateValidateCode(4).toString();
             log.info("code = {}", code);
             String code1 = "code:" + code;
@@ -56,13 +56,9 @@ public class UserController {
             // 将生成的验证码缓存到Redis中，并且设置有效期为5分钟
             redisTemplate.opsForValue().set(phone, code, 5, TimeUnit.MINUTES);
 
-
             return R.success("手机验证码短信发送成功");
         }
-
-
         return R.error("短信发送失败");
-
     }
 
     /**

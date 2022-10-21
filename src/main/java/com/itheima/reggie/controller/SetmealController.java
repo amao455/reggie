@@ -103,6 +103,8 @@ public class SetmealController {
      * 删除套餐
      */
     @DeleteMapping
+    // 将一条或多条数据从缓存中删除
+    // allEntitries：表示清除setmealCache的所有缓存数据
     @CacheEvict(value = "setmealCache", allEntries = true)
     public R delete(@RequestParam List<Long> ids){
         log.info("删除套餐，id为:{}", ids);
@@ -116,6 +118,9 @@ public class SetmealController {
      * 根据条件查询套餐数据
      */
     @GetMapping("/list")
+    // value-缓存的名称
+    // 在方法执行前spring会先查看花村中是否有数据，如果有数据，则直接返回缓存数据；
+    // 若没有数据，调用方法并将方法返回值存放到缓存中
     @Cacheable(value = "setmealCache", key = "#setmeal.categoryId+'_'+ #setmeal.status")
     public R<List<Setmeal>> list(Setmeal setmeal){
         log.info("setmeal:{}", setmeal);

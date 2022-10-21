@@ -13,9 +13,6 @@ import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.nio.charset.StandardCharsets;
-import java.time.LocalDateTime;
 
 @Slf4j
 @RestController
@@ -38,6 +35,7 @@ public class EmployeeController {
         // 2 根据页面提交的用户名username查询数据库
         LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.eq(Employee::getUsername, employee.getUsername());
+
         Employee emp = employeeService.getOne(queryWrapper);
 
         // 3 如果没有查询到则返回登录失败结果
@@ -45,7 +43,7 @@ public class EmployeeController {
             return R.error("登录失败");
         }
 
-        // 4 密码比对，如果不一致返回登录失败结果
+        // 4 如果查到该用户，密码比对，如果不一致返回登录失败结果
         if(!emp.getPassword().equals(password)){
             return R.error("登录失败");
         }
@@ -69,6 +67,8 @@ public class EmployeeController {
         request.getSession().removeAttribute("employee");
         return R.success("退出成功");
     }
+
+
 
     /*
     新增员工
@@ -103,14 +103,19 @@ public class EmployeeController {
 
         log.info("page = {}, pageSize = {}, name = {}", page, pageSize, name);
 
-        // 构造分页构造器
-        Page pageInfo = new Page(page, pageSize);
+//        // 构造分页构造器
+//        Page pageInfo = new Page(page, pageSize);
+//
+//        // 构造条件构造器
+//        LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper();
+//        // 添加过滤条件（name可能为空）
+//        queryWrapper.like(StringUtils.isNotEmpty(name), Employee::getName, name);
+//        // 添加排序条件
+//        queryWrapper.orderByDesc(Employee::getUpdateTime);
 
-        // 构造条件构造器
-        LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper();
-        // 添加过滤条件（name可能为空）
+        Page pageInfo = new Page(page, pageSize);
+        LambdaQueryWrapper<Employee> queryWrapper = new LambdaQueryWrapper<>();
         queryWrapper.like(StringUtils.isNotEmpty(name), Employee::getName, name);
-        // 添加排序条件
         queryWrapper.orderByDesc(Employee::getUpdateTime);
 
         // 执行查询
@@ -132,6 +137,8 @@ public class EmployeeController {
         Long empId = (Long)request.getSession().getAttribute("employee");
 //        employee.setUpdateTime(LocalDateTime.now());
 //        employee.setUpdateUser(empId);
+
+
         employeeService.updateById(employee);
 
         return R.success("员工信息修改成功");

@@ -11,15 +11,12 @@ import com.itheima.reggie.service.CategoryService;
 import com.itheima.reggie.service.DishFlavorService;
 import com.itheima.reggie.service.DishService;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
@@ -120,6 +117,7 @@ public class DishController {
         // 执行分页查询
         dishService.page(pageInfo, queryWrapper);
 
+        // TODO:需要认真查看
         // 对象拷贝，忽略到records这个属性
         BeanUtils.copyProperties(pageInfo, dishDtoPage, "records");
 

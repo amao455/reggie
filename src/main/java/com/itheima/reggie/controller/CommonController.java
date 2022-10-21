@@ -2,6 +2,7 @@ package com.itheima.reggie.controller;
 
 
 import com.itheima.reggie.common.R;
+import com.sun.xml.internal.bind.v2.TODO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,6 +26,7 @@ import java.util.UUID;
 @RequestMapping("/common")
 public class CommonController {
 
+    // 文件上传的位置
     @Value("${reggie.path}")
     private String basePath;
 
@@ -36,6 +38,7 @@ public class CommonController {
 
         // file是一个临时文件，需要转存到指定位置，否则本次请求完成后临时文件会删除
         log.info(file.toString());
+
 
         // 原始文件名
         String originalFilename = file.getOriginalFilename();// abc.jpg
@@ -76,6 +79,8 @@ public class CommonController {
             // 输出流，通过输出流将文件写回浏览器，在浏览器展示图片
             ServletOutputStream outputStream = response.getOutputStream();
 
+            // TODO：什么作用
+            // 标明服务器传来的数据类型
             response.setContentType("image/jpeg");
 
             int len = 0;
