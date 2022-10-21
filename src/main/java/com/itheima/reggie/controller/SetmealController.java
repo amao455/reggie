@@ -104,7 +104,7 @@ public class SetmealController {
      */
     @DeleteMapping
     // 将一条或多条数据从缓存中删除
-    // allEntitries：表示清除setmealCache的所有缓存数据
+    // allEntitries：表示清除setmealCache缓存的所有缓存数据
     @CacheEvict(value = "setmealCache", allEntries = true)
     public R delete(@RequestParam List<Long> ids){
         log.info("删除套餐，id为:{}", ids);
